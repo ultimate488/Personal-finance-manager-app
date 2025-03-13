@@ -1,0 +1,109 @@
+/* Dashboard Background */
+.dashboard-container {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Toggle Button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Balance Card */
+.balance-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.balance-card h3 {
+  font-size: 24px;
+}
+
+.income {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.expense {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Transactions */
+.transaction-list {
+  width: 100%;
+  max-width: 600px;
+}
+
+.transaction-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.transaction-card:hover {
+  transform: scale(1.03);
+}
+
+.transaction-card.income {
+  border-left: 5px solid #2ecc71;
+}
+
+.transaction-card.expense {
+  border-left: 5px solid #e74c3c;
+}
