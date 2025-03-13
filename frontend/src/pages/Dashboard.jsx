@@ -62,7 +62,7 @@ const Dashboard = () => {
 
       {/* Balance Section */}
       <div className="balance-card">
-        <h3>Balance: ${getIncome() - getExpenses()}</h3>
+        <h3>Balance:  ₹{getIncome() - getExpenses()}</h3>
         <p className="income">Income: ₹{getIncome()}</p>
         <p className="expense">Expenses: ₹{getExpenses()}</p>
       </div>
